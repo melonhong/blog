@@ -5,7 +5,7 @@ require 'fileutils'
 # 2. Type the command below to create new draft from your template
 
 # Command 
-# $ ruby creat_draft.rb "DRAFT_NAME" "TEMPLATE_NAME"
+# $ ruby create_draft.rb "DRAFT_NAME" "TEMPLATE_NAME"
 
 
 # +) Publish my draft: You have to install "jekyll-compose" plugin (https://github.com/jekyll/jekyll-compose)
