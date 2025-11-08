@@ -44,6 +44,7 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   font-family: v.$font-family-base;
+  cursor: url(../../assets/img/src/foo429.cur), auto !important;
 }
 
 h1.dynamic-title {
@@ -103,7 +104,7 @@ main {
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: var(--card-hover-bg);
+    background-color: var(--card-hovor-bg);
     opacity: 0;
     transition: opacity 0.35s ease-in-out;
   }
@@ -314,14 +315,7 @@ main {
 
 .embed-audio {
   width: 100%;
-
-  &.file {
-    display: block;
-  }
-
-  &.spotify {
-    border-radius: 14px;
-  }
+  display: block;
 
   @extend %img-caption;
 }
@@ -351,12 +345,12 @@ main {
 /* Overwrite bootstrap outline button */
 .btn.btn-outline-primary {
   &:not(.disabled):hover {
-    border-color: #007bff !important;
+    border-color: var(--btn-border-color) !important;
   }
 }
 
 .disabled {
-  color: rgb(206 196 196);
+  color: rgb(206, 196, 196);
   pointer-events: auto;
   cursor: not-allowed;
 }
@@ -423,10 +417,12 @@ mjx-container {
   }
 
   @include bp.lg {
+    transition: margin 0.4s ease;
     margin-left: v.$sidebar-width;
   }
 
   @include bp.xxxl {
+    transition: margin 0.4s ease;
     margin-left: v.$sidebar-width-large;
   }
 
@@ -480,4 +476,14 @@ mjx-container {
   > :not(script) {
     margin-top: 3rem;
   }
+}
+
+::selection {
+  background-color: var(--selection-bg-color);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--selection-bg-color);
+  color: white;
 }

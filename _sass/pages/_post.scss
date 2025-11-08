@@ -143,7 +143,9 @@ header {
 
   .post-tag {
     &:hover {
+      @extend %link-hover;
       @extend %tag-hover;
+      @extend %no-bottom-border;
     }
   }
 }
@@ -162,6 +164,7 @@ header {
     }
 
     &:hover {
+      background-color: var(--button-hover-bg);
       &:not(.disabled)::before {
         color: whitesmoke;
       }

@@ -24,13 +24,20 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
   scrollbar-width: none; /* Firefox */
 
   /* Hide scrollbar for Chrome, Safari and Opera */
+  @include mx.slide;
+
   &::-webkit-scrollbar {
     display: none;
   }
 
-  @include bp.lt(bp.get(lg)) {
-    @include mx.slide;
+  @include bp.lt(bp.get(xxxl)) {
+    [#{$sidebar-display}] & {
+      transform: translateX(-#{v.$sidebar-width}); /* hide */
+      -webkit-transform: translateX(-#{v.$sidebar-width});
+    }
+  }
 
+  @include bp.lt(bp.get(lg)) {
     transform: translateX(-#{v.$sidebar-width}); /* hide */
     -webkit-transform: translateX(-#{v.$sidebar-width});
 
@@ -199,7 +206,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
       justify-content: center;
 
       &:not(:focus-visible) {
-        box-shadow: var(--sidebar-border-color) 0 0 0 1px;
+        box-shadow: var(--sidebar-btn-border) 0 0 0 1px;
       }
 
       &:hover {
@@ -251,8 +258,22 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
 [#{$sidebar-display}] {
   #main-wrapper {
+    @include bp.lt(bp.get(xxxl)) {
+      margin-left: 0;
+      transition: margin 0.4s ease;
+    }
+
     @include bp.lt(bp.get(lg)) {
+      @include mx.slide;
       transform: translateX(v.$sidebar-width);
+    }
+
+    .px-md-4 {
+      width: 100%;
+    }
+
+    #panel-wrapper {
+      display: none;
     }
   }
 }
