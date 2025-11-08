@@ -1,6 +1,6 @@
 # Bundler cache
 .bundle
-# vendor
+vendor
 Gemfile.lock
 
 # Jekyll cache
@@ -23,5 +23,5 @@ package-lock.json
 !.vscode/tasks.json
 
 # Misc
-_sass/vendors
+# _sass/vendors
 assets/js/dist
