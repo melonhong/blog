@@ -1,0 +1,129 @@
+<!--<div class="music-player-container">
+  <iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    frameborder="0"
+    height="175"
+    class="music-player"
+    src="https://embed.music.apple.com/kr/album/cool-with-you/1695951888?i=1695951905"
+    sandbox="allow-forms allow-music-player-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+  ></iframe>
+</div>
+-->
+<div id="overlay" class="overlay music-player-hidden"></div>
+<iframe
+    allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+    frameborder="0"
+    height="450"
+    width="500"
+    id="music-player"
+    class="music-player-hidden"
+    src="https://embed.music.apple.com/kr/album/newjeans-2nd-ep-get-up/1695951888"
+    sandbox="allow-forms allow-music-player-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+></iframe>
+  
+<style>
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+    }
+
+    #music-player-container {
+        display: flex;
+    }
+  
+    .music-player {
+        border: none;
+    }
+
+    .music-player-popup {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1001;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .music-player-hidden {
+        display: none;
+    }
+
+    /* From Uiverse.io by aryamitra06 */ 
+    .loader {
+        margin: 0 0 .5rem 1rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .bar {
+        display: inline-block;
+        width: .1rem;
+        height: .7rem;
+        background-color: rgba(151, 151, 151, 0.5);
+        border-radius: 10px;
+        animation: scale-up4 1s linear infinite;
+    }
+
+    .bar:nth-child(2) {
+    height: .7rem;
+    margin: 0 0.5rem;
+    animation-delay: .25s;
+    }
+
+    .bar:nth-child(3) {
+    animation-delay: .5s;
+    }
+
+    @keyframes scale-up4 {
+        20% {
+            background-color: #a0a0a0;
+            transform: scaleY(1.5);
+        }
+
+        40% {
+            transform: scaleY(1);
+        }
+    }
+</style>
+
+<script>
+    const musicbtn = document.getElementById('music-btn');
+    const musicPlayer = document.getElementById('music-player');
+    const overlay = document.getElementById('overlay');
+
+    function showPlayer() {
+        musicPlayer.classList.remove('music-player-hidden');
+        musicPlayer.classList.add('music-player-popup');
+        musicPlayer.style.animation = 'fadeIn 1s forwards';
+        overlay.classList.remove('music-player-hidden');
+    };
+
+    function removePlayer() {
+        musicPlayer.classList.add('music-player-hidden');
+        overlay.classList.add('music-player-hidden');
+    };
+
+    musicbtn.addEventListener('mouseenter', showPlayer);
+    musicbtn.addEventListener('touchstart', (e) => {
+        e.preventDefault();
+        showPlayer();
+    });
+
+    musicPlayer.addEventListener('mouseleave', removePlayer);
+    overlay.addEventListener('click', removePlayer);
+</script>
