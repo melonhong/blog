@@ -265,6 +265,7 @@ $sidebar-display: 'sidebar-display'; /* the attribute for sidebar display */
 
     @include bp.lt(bp.get(lg)) {
       @include mx.slide;
+
       transform: translateX(v.$sidebar-width);
     }
 

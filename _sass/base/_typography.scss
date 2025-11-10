@@ -5,6 +5,8 @@
 
 @for $i from 1 through 5 {
   h#{$i} {
+    // h1, h2, h3, h4, h5
+
     @extend %heading;
 
     @if $i > 1 {
@@ -29,9 +31,7 @@
         }
       }
 
-      & {
-        font-size: 1rem + (5 - $i) * $size-factor;
-      }
+      font-size: 1rem + (5 - $i) * $size-factor;
     } @else {
       font-size: 1.05rem;
     }
@@ -188,7 +188,7 @@ main {
     }
   }
 
-  /* Add bottom line to main content h1 and h2*/
+  /* Add bottom line to main content h1 and h2 */
   .content > h1,
   h2 {
     margin: 4rem 0 1rem 0;
@@ -249,7 +249,7 @@ main {
     border-spacing: 0;
 
     thead {
-      border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+      border-bottom: solid 2px rgb(210 215 217 / 75%);
 
       th {
         @extend %table-cell;

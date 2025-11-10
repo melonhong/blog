@@ -44,7 +44,7 @@ body {
   color: var(--text-color);
   -webkit-font-smoothing: antialiased;
   font-family: v.$font-family-base;
-  cursor: url(../../assets/img/src/foo429.cur), auto !important;
+  cursor: url("../../assets/img/src/foo429.cur"), auto !important;
 }
 
 h1.dynamic-title {
@@ -350,7 +350,7 @@ main {
 }
 
 .disabled {
-  color: rgb(206, 196, 196);
+  color: rgb(206 196 196);
   pointer-events: auto;
   cursor: not-allowed;
 }
