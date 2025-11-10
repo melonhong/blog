@@ -5,6 +5,8 @@
 
 @for $i from 1 through 5 {
   h#{$i} {
+    // h1, h2, h3, h4, h5
+
     @extend %heading;
 
     @if $i > 1 {
@@ -29,9 +31,7 @@
         }
       }
 
-      & {
-        font-size: 1rem + (5 - $i) * $size-factor;
-      }
+      font-size: 1rem + (5 - $i) * $size-factor;
     } @else {
       font-size: 1.05rem;
     }

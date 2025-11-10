@@ -7,7 +7,7 @@ export function showPlayer() {
 
   musicPlayer.classList.remove('music-player-hidden');
   musicPlayer.classList.add('music-player-popup');
-  musicPlayer.style.animation = 'fadeIn 1s forwards';
+  musicPlayer.style.animation = 'fade-in 1s forwards';
   overlay.classList.remove('music-player-hidden');
 }
 
