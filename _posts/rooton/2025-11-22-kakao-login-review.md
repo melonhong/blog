@@ -8,7 +8,6 @@ categories: [rooton]
 tags: []
 ---
 
-
 ## 설계
 
 ### 기존 코드 분석
@@ -42,7 +41,6 @@ tags: []
 
 > 카카오 인증 > 리다이렉션 페이지로 이동 > 인가 코드로 액세스 토큰 가져오기 > 액세스 토큰으로 카카오 로그인 > DB 처리를 하고 JWT를 생성해 프론트엔드로 이동
 
----
 
 ## 구현
 
@@ -64,6 +62,7 @@ tags: []
 **추가 참고 자료:**
 
 * [Spring Boot OAuth2, JWT 적용해보리기](https://velog.io/@jkijki12/Spring-Boot-OAuth2-JWT-%EC%A0%81%EC%9A%A9%ED%95%B4%EB%B3%B4%EB%A6%AC%EA%B8%B0)
+
 
 ## 원글
 [클라우드 네이티브](https://readinging.tistory.com/5)

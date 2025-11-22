@@ -8,6 +8,7 @@ categories:
 - rooton
 tags: []
 ---
+
 ## Spring Security
 
 **인증(Authentication), 인가(Authorization), 보안** 등을 제공하는 프레임워크입니다. \*\*Servlet 기반 (Spring MVC)\*\*과 **Reactive 기반 (Spring WebFlux)** 모두 사용 가능합니다.
@@ -55,7 +56,6 @@ Spring Security가 제공하는 특수한 필터로, 다른 **SecurityFilterChai
 
 클라이언트가 보호된 리소스에 접근하려다 인증에 실패했을 때, Spring Security는 그 요청 정보를 **RequestCache**에 저장해 둡니다. 인증 성공 시 저장해 둔 요청으로 자동으로 리다이렉트되도록 처리합니다.
 
------
 
 ## Spring Cloud Gateway
 
@@ -99,7 +99,6 @@ Gateway의 필터 레벨:
 | **Netty Write Response Filter** | 응답이 돌아올 때, 클라이언트로 응답을 쓰는 필터 (응답 직후 후처리). |
 | **RouteToRequestUrl Filter** | 라우트에 정의한 URL대로 요청의 URL을 수정하여 반영. |
 
------
 
 ## 원글
 

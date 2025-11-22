@@ -7,12 +7,12 @@ categories:
 - rooton
 tags: [데이터베이스]
 ---
+
 ## 개요
 
 원래 스프링부트의 데이터베이스는 Mysql로 설정되어 있었다.
 하지만 요구사항 변화에 따라 Postgresql로 변환하기로 했다.
 
------
 
 ## 변경해야할 코드
 
@@ -60,6 +60,7 @@ runtimeOnly 'org.postgresql:postgresql:42.7.3'
 ```
 
 의존성에서 Mysql을 제거하고 Postgresql로 바꾸어준다.
+
 
 ## 원글
 [클라우드 네이티브](https://readinging.tistory.com/6)

@@ -7,13 +7,6 @@ categories:
 - rooton
 tags: []
 ---
-## 개요
-
-이 글은 
-
-> Spring Cloud Gateway와 Spring Security에 대한 이론은 다음 글에서 다룰 예정입니다.
-
------
 
 ## 프로젝트 초기 설정
 
@@ -59,7 +52,6 @@ public class JwtUtil {
 }
 ```
 
------
 
 ## JWT 인증 필터 (JwtAuthenticationFilter)
 
@@ -106,7 +98,6 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
 }
 ```
 
------
 
 ## 보안 설정 (SecurityConfig)
 
@@ -166,7 +157,6 @@ public class SecurityConfig {
 
 게이트웨이가 백엔드에 요청을 프록시할 때, 백엔드도 CORS 헤더를 추가해서 응답하면 응답 헤더에 CORS 관련 헤더가 **중복되거나 충돌**할 수 있습니다. 따라서 **CORS 허용은 Gateway에만 두는 것**이 권장됩니다.
 
------
 
 ## 테스트 결과
 
@@ -177,8 +167,6 @@ public class SecurityConfig {
 3.  **유효하지 않은 JWT 토큰을 보내기**
       * 토큰이 없거나 유효하지 않은 문자열(예: `foo`)을 `Authorization` 헤더에 넣으면 **401 Unauthorized** 에러가 반환됩니다.
 
------
 
 ## 원글
-
 [[게이트웨이] Spring Cloud Gateway로 게이트웨이 구현하기](https://readinging.tistory.com/11)

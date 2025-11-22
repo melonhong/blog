@@ -8,6 +8,7 @@ categories:
 - rooton
 tags: []
 ---
+
 ## ApiResponse
 
 `ApiResponse`는 REST API 응답을 표준화하기 위해 만든 커스텀 래퍼 클래스입니다. (스프링 부트 기본 프로젝트 코드)
@@ -72,7 +73,6 @@ public class ApiResponse<T> {
 | `HttpServletResponse` | 서버 응답을 직접 제어 (쿠키 추가, 리다이렉트, 헤더 설정 등) |
 | `ApiResponse` | API 응답 구조 통일을 위한 JSON DTO |
 
------
 
 ## ResponseEntity
 
@@ -129,7 +129,6 @@ public ResponseEntity<?> kakaoCallback(@RequestParam String code) throws Excepti
 | `ResponseEntity` | HTTP 응답 상태, 헤더, 바디를 한번에 구성할 수 있는 스프링 클래스 |
 | `ResponseCookie` | HttpOnly, Secure, SameSite 등 쿠키 속성을 쉽게 설정할 수 있는 스프링 클래스 |
 
------
 
 ## OAuth 로그인 + JWT 쿠키 패턴 비교
 
@@ -141,7 +140,6 @@ public ResponseEntity<?> kakaoCallback(@RequestParam String code) throws Excepti
 | SPA 인증 패턴 적합성 | 낮음 | 높음 |
 | 실무 사용 예시 | 순수 REST API | OAuth, JWT, 리다이렉트 |
 
------
 
 ## 결론
 
@@ -150,7 +148,6 @@ public ResponseEntity<?> kakaoCallback(@RequestParam String code) throws Excepti
   * **순수 API 응답**: `ApiResponse` (사용자 정보 조회, 게시글 목록 API 등)
   * **OAuth 로그인 + JWT 전달 + SPA 리다이렉트**: `ResponseEntity` (쿠키, HTTP 상태 코드, 리다이렉트를 한 번에 처리 가능)
 
------
 
 ## 원글
 

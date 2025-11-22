@@ -37,7 +37,6 @@ VM의 단점을 해결하기 위해 등장했으며, **가벼운 격리 환경**
 
 ![VM and Container](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FnRs2Y%2FdJMcah3LMdd%2FAAAAAAAAAAAAAAAAAAAAAECuNYxH6PpQu9JYw6M-aXuceF7BnembzhlDg9PKI2nQ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1764514799%26allow_ip%3D%26allow_referer%3D%26signature%3Dx3Q8Q%252FuegJLOGNaHfcPAQTnk15Y%253D)_가상머신과 컨테이너 비교_
 
----
 
 ## 쿠버네티스 (Kubernetes)
 
@@ -76,7 +75,6 @@ k8s에는 이 파드들을 관리하기 위한 여러 **오브젝트(Objects)**�
 
 이 외에도 시크릿(Secret), 네임스페이스(Namespace), 컨피그맵(ConfigMap), 볼륨(Volume), 인그레스(Ingress) 등 수많은 오브젝트들이 존재합니다.
 
----
 
 ## 참조
 
@@ -87,7 +85,6 @@ k8s에는 이 파드들을 관리하기 위한 여러 **오브젝트(Objects)**�
 ### 컨테이너 및 도커 (Container & Docker)
 * **Docker 공식 문서:** [https://docs.docker.com/](https://docs.docker.com/)
 
----
 
 ## 원글
 [[k8s] 쿠버네티스를 공부해보자](https://readinging.tistory.com/15)
