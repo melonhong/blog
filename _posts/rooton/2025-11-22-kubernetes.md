@@ -7,11 +7,11 @@ categories:
 - rooton
 tags: []
 ---
+
 ## 개요
 
 서비스 개발이 마무리됨에 따라, **MSA(Microservices Architecture)** 로 구성된 각 서비스들을 효과적으로 관리하고 컨트롤하기 위해 **Kubernetes (줄여서 k8s)** 를 사용하게 되었습니다. k8s를 이해하기 위해 먼저 **컨테이너** 개념을 살펴봅니다.
 
----
 
 ## 컨테이너와 가상 머신(VM)
 
