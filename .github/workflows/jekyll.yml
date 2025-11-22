@@ -47,7 +47,6 @@ jobs:
       - name: Install Node.js dependencies
         run: npm install
       - name: Build Frontend Assets (JS/CSS)
-        # Chirpy 테마는 보통 이 명령으로 Assets을 빌드합니다.
         run: npm run build
       - name: Setup Pages
         id: pages
