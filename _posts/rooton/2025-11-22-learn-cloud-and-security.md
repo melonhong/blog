@@ -11,7 +11,7 @@ tags: []
 
 ## Spring Security
 
-**인증(Authentication), 인가(Authorization), 보안** 등을 제공하는 프레임워크입니다. \*\*Servlet 기반 (Spring MVC)\*\*과 **Reactive 기반 (Spring WebFlux)** 모두 사용 가능합니다.
+**인증(Authentication), 인가(Authorization), 보안** 등을 제공하는 프레임워크입니다. **Servlet 기반 (Spring MVC)**과 **Reactive 기반 (Spring WebFlux)** 모두 사용 가능합니다.
 
 ### Filter의 기본 개념과 역할
 
