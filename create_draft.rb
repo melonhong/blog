@@ -9,7 +9,7 @@ require 'fileutils'
 
 
 # +) Publish my draft: You have to install "jekyll-compose" plugin (https://github.com/jekyll/jekyll-compose)
-# $ bundle exec jekyll publish _drafts/DRAFT_NAME.md --timestamp-format "%Y-%m-%d %H:%M:%S %z"
+# $ bundle exec jekyll publish --timestamp-format "%Y-%m-%d %H:%M:%S %z" _drafts/DRAFT_NAME.md
 
 # Function to create a draft post based on a given template and title
 def create_post(title, template_name)
